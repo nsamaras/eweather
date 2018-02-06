@@ -1,19 +1,17 @@
 package com.eweather.util;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-
-import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.eweather.bean.Eweather;
 import com.eweather.utils.TempUtils;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class TempUtilsTest {
 
@@ -29,16 +27,26 @@ public class TempUtilsTest {
 	public void testGetWeatherForCitiesCount() throws MalformedURLException, IOException {
 		TempUtils util = new TempUtils();
 		String json = util.getWeatherForCities("http://api.openweathermap.org/data/2.5/group", 
-				"2c48c02c54482ea955d6414942572809", Arrays.asList("735914"));
-		Gson gson = new Gson();
-		Test cnt = gson.fromJson(json, Test.class);
+				"2c48c02c54482ea955d6414942572809", Arrays.asList("735914", "734077", "264371"));
 		
-//		List<Test> list = gson.fromJson(json, new TypeToken<List<Test>>(){}.getType());
+		ObjectMapper mapper = new ObjectMapper();
+		Eweather eweather = mapper.readValue(json, Eweather.class);
 		
-//		ObjectMapper mapper = new ObjectMapper();
-//		Map<String, Object> map = mapper.readValue(result, Map.class);
-//		mapper.readValue(result, Cnt.class);
-		
-		assertEquals(3, json);
+		assertEquals(Integer.valueOf(3), eweather.getCnt());
+	}
+	
+	@Test
+	public void	testGetWeatherForCitiesMalformedException() {
+		TempUtils util = new TempUtils();
+		boolean result = false;
+		try {
+			 util.getWeatherForCities("xttp://api.openweathermap.org/data/2.5/group", 
+					"2c48c02c54482ea955d6414942572809", Arrays.asList("735914", "734077", "264371"));
+		} catch (MalformedURLException  e1) {
+			result = true;
+		} catch (IOException e2) {
+			result = false;
+		}
+		assertTrue(result);
 	}
 }
