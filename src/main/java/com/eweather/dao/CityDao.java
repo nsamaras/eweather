@@ -1,10 +1,10 @@
 package com.eweather.dao;
 
-import com.eweather.entity.CityEntity;
+import com.eweather.entity.City;
 
 public interface CityDao {
 
-	void create(CityEntity cityEntity);
+	void create(City cityEntity);
 	
-	CityEntity find(int id);
+	City find(int id);
 }

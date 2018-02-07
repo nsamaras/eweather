@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-import com.eweather.bean.Eweather;
+import com.eweather.info.Eweather;
 import com.eweather.utils.TempUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

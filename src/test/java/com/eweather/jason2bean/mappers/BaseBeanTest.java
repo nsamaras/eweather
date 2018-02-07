@@ -1,12 +1,12 @@
 package com.eweather.jason2bean.mappers;
 
-import com.eweather.bean.Clouds;
-import com.eweather.bean.Coord;
+import com.eweather.info.Clouds;
+import com.eweather.info.Coord;
 
 public class BaseBeanTest {
 
-	public com.eweather.bean.List generateBean() {
-		com.eweather.bean.List bean = new com.eweather.bean.List();
+	public com.eweather.info.List generateBean() {
+		com.eweather.info.List bean = new com.eweather.info.List();
 		
 		// clouds
 		Clouds clouds = generateClouds();
