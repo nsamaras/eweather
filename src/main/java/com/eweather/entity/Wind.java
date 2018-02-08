@@ -9,22 +9,21 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="COORD")
-public class Coord {
+@Table(name="WIND")
+public class Wind {
 
 	@Id  
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Integer id;
 	
-	@Column(name = "LON",  nullable = false)
-	private Double lon;
+	@Column(name = "SPEED", nullable = false)
+	private Double speed;
 	
-	@Column(name = "LAT",  nullable = false)
-	private Double lat;
+	@Column(name = "DEG", nullable = false)
+	private Integer deg;
 	
-	@OneToOne(mappedBy="coord")
+	@OneToOne(mappedBy="wind")
 	private City city;
-	
 	
 	public Integer getId() {
 		return id;
@@ -32,17 +31,17 @@ public class Coord {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Double getLon() {
-		return lon;
+	public Double getSpeed() {
+		return speed;
 	}
-	public void setLon(Double lon) {
-		this.lon = lon;
+	public void setSpeed(Double speed) {
+		this.speed = speed;
 	}
-	public Double getLat() {
-		return lat;
+	public Integer getDeg() {
+		return deg;
 	}
-	public void setLat(Double lat) {
-		this.lat = lat;
+	public void setDeg(Integer deg) {
+		this.deg = deg;
 	}
 	public City getCity() {
 		return city;

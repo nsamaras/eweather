@@ -1,5 +1,7 @@
 package com.eweather.entity;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,11 +9,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.NotEmpty;
 
 
 @Entity
@@ -23,21 +23,33 @@ public class City {
 	private Integer id;
 	
 	@Column(name = "NAME", nullable = false)
-	@NotNull(message = "The name is compulsory")
-	@NotEmpty(message = "The name should not be empty")
 	private String name;
 	
 	@Column(name = "VISIBILITY", nullable = false)
-	@NotEmpty(message = "The visibility should not be empty")
 	private Integer visibility;
 	
-	@OneToOne(cascade = CascadeType.PERSIST)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="coord_id", unique=true)
 	private Coord coord;
 	
-	@OneToOne(cascade = CascadeType.PERSIST)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="sys_id", unique=true)
 	private Sys sys;
+	
+	@OneToMany(mappedBy="city",  cascade=CascadeType.ALL)
+	private List<Weather> weather;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="main_id", unique=true)
+	private Main main;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="wind_id", unique=true)
+	private Wind wind;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="clouds_id", unique=true)
+	private Clouds clouds;
 	
 	public Integer getId() {
 		return id;
@@ -68,6 +80,30 @@ public class City {
 	}
 	public void setSys(Sys sys) {
 		this.sys = sys;
+	}
+	public List<Weather> getWeather() {
+		return weather;
+	}
+	public void setWeather(List<Weather> weather) {
+		this.weather = weather;
+	}
+	public Main getMain() {
+		return main;
+	}
+	public void setMain(Main main) {
+		this.main = main;
+	}
+	public Wind getWind() {
+		return wind;
+	}
+	public void setWind(Wind wind) {
+		this.wind = wind;
+	}
+	public Clouds getClouds() {
+		return clouds;
+	}
+	public void setClouds(Clouds clouds) {
+		this.clouds = clouds;
 	}
 	
 }

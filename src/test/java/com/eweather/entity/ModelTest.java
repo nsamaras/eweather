@@ -1,54 +1,73 @@
 package com.eweather.entity;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
-import com.eweather.entity.City;
-import com.eweather.entity.Coord;
-
-public class ModelTest  extends BaseEntityManager {
+public class ModelTest extends BaseEntityManager {
 
 	@Test
-	public void saveTest() {		
-		City city = createCityEntity();
+	public void persistTest() {
+
+		City city = new PopulateModel().populateCity();
+
 		em.persist(city);
-		
+
 		// test city
 		assertNotNull(city.getId());
-		
+
 		// test coord
 		assertNotNull(city.getCoord().getId());
-		
+
 		// test sys
 		assertNotNull(city.getSys().getId());
+
+		// weather
+		assertEquals(2, city.getWeather().size());
+		assertNotNull(city.getWeather().get(0).getId());
+		assertNotNull(city.getWeather().get(1).getId());
+
+		// main
+		assertNotNull(city.getMain().getId());
+
+		// wind
+		assertNotNull(city.getWind().getId());
+
+		// clouds
+		assertNotNull(city.getClouds().getId());
 	}
-	
-	private City createCityEntity() {
-		City city = new City();
-		city.setName("test");
-		city.setVisibility(1);
-		city.setCoord(populateCoord());
-		city.setSys(populateSys());
-		return city;
+
+	@Test
+	public void findByIdTest() {
+
+		City city = new PopulateModel().populateCity();
+		em.persist(city);
+
+		City result = em.find(City.class, city.getId());
+		
+		// test city
+		assertNotNull(result.getId());
+		
+		// test coord
+		assertNotNull(result.getCoord().getId());
+		
+		// test sys
+		assertNotNull(result.getSys().getId());
+		
+		// weather
+		assertEquals(2, result.getWeather().size());
+		assertNotNull(result.getWeather().get(0).getId());
+		assertNotNull(result.getWeather().get(1).getId());
+		
+		// main
+		assertNotNull(result.getMain().getId());
+		
+		// wind
+		assertNotNull(result.getWind().getId());
+		
+		// clouds
+		assertNotNull(result.getClouds().getId());
 	}
-	
-	private Coord populateCoord() {
-		Coord coord = new Coord();
-		coord.setLat(1.1);
-		coord.setLon(1.1);
-		return coord;
-	}
-	
-	private Sys populateSys() {
-		Sys sys = new Sys();
-		sys.setCountry("Athens");
-		sys.setCountry("Greece");
-		sys.setMessage(0.0029);
-		sys.setSunrise(1517981525);
-		sys.setSunset(1518019006);
-		sys.setType(1);
-		return sys;
-	}
-	
+
 }

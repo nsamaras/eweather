@@ -4,7 +4,7 @@ import com.eweather.entity.City;
 
 public interface CityDao {
 
-	void create(City cityEntity);
+	void persist(City cityEntity);
 	
-	City find(int id);
+	City findCityById(int id);
 }

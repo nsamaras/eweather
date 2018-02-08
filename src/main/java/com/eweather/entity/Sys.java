@@ -8,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 @Entity
 @Table(name="SYS")
 public class Sys {
@@ -19,23 +17,18 @@ public class Sys {
 	private Integer id;
 	
 	@Column(name = "TYPE", nullable = false)
-	@NotEmpty(message = "The type should not be empty")
 	private Integer type;
 	
 	@Column(name = "MESSAGE", nullable = false)
-	@NotEmpty(message = "The type should not be empty")
 	private Double message;
 	
 	@Column(name = "country", nullable = false)
-	@NotEmpty(message = "The country should not be empty")
 	private String country;
 	
 	@Column(name = "SUNRISE", nullable = false)
-	@NotEmpty(message = "The sunrise should not be empty")
 	private Integer sunrise;
 	
 	@Column(name = "SUNSET", nullable = false)
-	@NotEmpty(message = "The sunset should not be empty")
 	private Integer sunset;
 	
 	@OneToOne(mappedBy="sys")

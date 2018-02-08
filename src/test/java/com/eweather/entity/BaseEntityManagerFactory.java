@@ -9,8 +9,8 @@ public abstract class BaseEntityManagerFactory {
 	protected EntityManagerFactory emf;
 	
 	protected BaseEntityManagerFactory() {
-		// Check in the persistence.xml the persistence-unit name="persistenceUnitExample"
-		String persistenceUnitName = "persistenceUnitExample";
+		// Check in the resources/META-INF/persistence.xml the persistence-unit name="persistenceUnitExample"
+		String persistenceUnitName = "persistenceUnitTest";
 		emf =  Persistence.createEntityManagerFactory(persistenceUnitName);
 	}
 }

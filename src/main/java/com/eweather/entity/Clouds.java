@@ -9,44 +9,39 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="COORD")
-public class Coord {
+@Table(name="CLOUDS")
+public class Clouds {
 
 	@Id  
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Integer id;
 	
-	@Column(name = "LON",  nullable = false)
-	private Double lon;
+	@Column(name = "ALL", nullable = false)
+	private Integer all;
 	
-	@Column(name = "LAT",  nullable = false)
-	private Double lat;
-	
-	@OneToOne(mappedBy="coord")
+	@OneToOne(mappedBy="clouds")
 	private City city;
-	
-	
+
+	public Integer getAll() {
+		return all;
+	}
+
+	public void setAll(Integer all) {
+		this.all = all;
+	}
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Double getLon() {
-		return lon;
-	}
-	public void setLon(Double lon) {
-		this.lon = lon;
-	}
-	public Double getLat() {
-		return lat;
-	}
-	public void setLat(Double lat) {
-		this.lat = lat;
-	}
+
 	public City getCity() {
 		return city;
 	}
+
 	public void setCity(City city) {
 		this.city = city;
 	}
