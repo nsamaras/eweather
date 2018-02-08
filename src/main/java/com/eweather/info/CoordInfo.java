@@ -1,6 +1,6 @@
 package com.eweather.info;
 
-public class Coord {
+public class CoordInfo {
 
 	private Double lon;
 	private Double lat;

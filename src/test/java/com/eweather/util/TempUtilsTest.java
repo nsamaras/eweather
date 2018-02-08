@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-import com.eweather.info.Eweather;
+import com.eweather.info.EweatherInfo;
 import com.eweather.utils.TempUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -30,7 +30,7 @@ public class TempUtilsTest {
 				"2c48c02c54482ea955d6414942572809", Arrays.asList("735914", "734077", "264371"));
 		
 		ObjectMapper mapper = new ObjectMapper();
-		Eweather eweather = mapper.readValue(json, Eweather.class);
+		EweatherInfo eweather = mapper.readValue(json, EweatherInfo.class);
 		
 		assertEquals(Integer.valueOf(3), eweather.getCnt());
 	}

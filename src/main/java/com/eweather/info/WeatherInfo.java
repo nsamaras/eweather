@@ -1,6 +1,6 @@
 package com.eweather.info;
 
-public class Weather {
+public class WeatherInfo {
 
 	private Integer id;
 	private String main;

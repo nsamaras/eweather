@@ -1,14 +1,15 @@
 package com.eweather.mappers;
 
 import com.eweather.entity.Sys;
+import com.eweather.info.SysInfo;
 
 /**
  * That class has the responsibility to map the 
- * @com.eweather.info.Sys to @com.eweather.entity.Sys
+ * @SysInfo to @Sys
  */
 public class SysInfoToSysEntityMapper {
 
-	public Sys apply(com.eweather.info.Sys sysInfo) {
+	public Sys apply(SysInfo sysInfo) {
 		Sys sys = new Sys();
 		sys.setCountry(sysInfo.getCountry());
 		sys.setMessage(sysInfo.getMessage());

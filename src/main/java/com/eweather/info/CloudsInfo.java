@@ -1,6 +1,6 @@
 package com.eweather.info;
 
-public class Clouds {
+public class CloudsInfo {
 
 	private Integer all;
 

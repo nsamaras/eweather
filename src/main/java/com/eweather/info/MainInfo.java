@@ -1,6 +1,6 @@
 package com.eweather.info;
 
-public class Main {
+public class MainInfo {
 
 	private Double temp;
 	private Integer pressure;

@@ -4,14 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.eweather.entity.Weather;
+import com.eweather.info.WeatherInfo;
 
 /**
  * That class has the responsibility to map the 
- * @com.eweather.info.Weather to @com.eweather.entity.Weather
+ * @WeatherInfo to @Weather
  */
 public class WeatherListInfoToWeatherListEntityMapper {
 
-	public List<Weather> apply(List<com.eweather.info.Weather> weatherList) {
+	public List<Weather> apply(List<WeatherInfo> weatherList) {
 		List<Weather> weathers = new ArrayList<>();
 		weatherList.forEach(w -> {
 			Weather weather = new Weather();

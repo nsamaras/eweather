@@ -1,7 +1,7 @@
 package com.eweather.mappers;
 
 import com.eweather.entity.City;
-import com.eweather.info.Eweather;
+import com.eweather.info.EweatherInfo;
 
 /**
  * That class has the responsibility to map the 
@@ -9,7 +9,7 @@ import com.eweather.info.Eweather;
  */
 public class EweatherToCityMapper {
 
-	public City apply(Eweather eweather) {
+	public City apply(EweatherInfo eweather) {
 		City city = new City();
 		
 		eweather.getList().forEach(item -> {

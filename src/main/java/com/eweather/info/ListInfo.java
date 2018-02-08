@@ -1,40 +1,40 @@
 package com.eweather.info;
 
-public class List {
+public class ListInfo {
 
-	private Coord coord;
-	private Sys sys;
-	private java.util.List<Weather> weather;
-	private Main main;
+	private CoordInfo coord;
+	private SysInfo sys;
+	private java.util.List<WeatherInfo> weather;
+	private MainInfo main;
 	private Integer visibility;
-	private Wind wind;
-	private Clouds clouds;
+	private WindInfo wind;
+	private CloudsInfo clouds;
 	private Integer dt;
 	private Integer id;
 	private String name;
 	
-	public Coord getCoord() {
+	public CoordInfo getCoord() {
 		return coord;
 	}
-	public void setCoord(Coord coord) {
+	public void setCoord(CoordInfo coord) {
 		this.coord = coord;
 	}
-	public Sys getSys() {
+	public SysInfo getSys() {
 		return sys;
 	}
-	public void setSys(Sys sys) {
+	public void setSys(SysInfo sys) {
 		this.sys = sys;
 	}
-	public java.util.List<Weather> getWeather() {
+	public java.util.List<WeatherInfo> getWeather() {
 		return weather;
 	}
-	public void setWeather(java.util.List<Weather> weather) {
+	public void setWeather(java.util.List<WeatherInfo> weather) {
 		this.weather = weather;
 	}
-	public Main getMain() {
+	public MainInfo getMain() {
 		return main;
 	}
-	public void setMain(Main main) {
+	public void setMain(MainInfo main) {
 		this.main = main;
 	}
 	public Integer getVisibility() {
@@ -43,16 +43,16 @@ public class List {
 	public void setVisibility(Integer visibility) {
 		this.visibility = visibility;
 	}
-	public Wind getWind() {
+	public WindInfo getWind() {
 		return wind;
 	}
-	public void setWind(Wind wind) {
+	public void setWind(WindInfo wind) {
 		this.wind = wind;
 	}
-	public Clouds getClouds() {
+	public CloudsInfo getClouds() {
 		return clouds;
 	}
-	public void setClouds(Clouds clouds) {
+	public void setClouds(CloudsInfo clouds) {
 		this.clouds = clouds;
 	}
 	public Integer getDt() {

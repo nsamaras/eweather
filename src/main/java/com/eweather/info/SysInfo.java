@@ -1,6 +1,6 @@
 package com.eweather.info;
 
-public class Sys {
+public class SysInfo {
 
 	private Integer type;
 	private Integer id;

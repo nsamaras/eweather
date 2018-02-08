@@ -1,14 +1,15 @@
 package com.eweather.mappers;
 
 import com.eweather.entity.Wind;
+import com.eweather.info.WindInfo;
 
 /**
  * That class has the responsibility to map the 
- * @com.eweather.info.Wind to @com.eweather.entity.Wind
+ * @WindInfo to @Wind
  */
 public class WindInfoToWindEntityMapper {
 
-	public Wind apply(com.eweather.info.Wind windInfo) {
+	public Wind apply(WindInfo windInfo) {
 		Wind wind = new Wind();
 		wind.setDeg(windInfo.getDeg());
 		wind.setSpeed(windInfo.getSpeed());

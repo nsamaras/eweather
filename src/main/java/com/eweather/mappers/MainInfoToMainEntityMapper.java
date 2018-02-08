@@ -1,14 +1,15 @@
 package com.eweather.mappers;
 
 import com.eweather.entity.Main;
+import com.eweather.info.MainInfo;
 
 /**
  * That class has the responsibility to map the 
- * @com.eweather.info.Main to @com.eweather.entity.Main
+ * @MainInfo to @Main
  */
 public class MainInfoToMainEntityMapper {
 
-	public Main apply (com.eweather.info.Main mainInfo) {
+	public Main apply (MainInfo mainInfo) {
 		com.eweather.entity.Main main = new com.eweather.entity.Main();
 		main.setHumidity(mainInfo.getHumidity());
 		main.setPressure(mainInfo.getPressure());

@@ -1,6 +1,6 @@
 package com.eweather.info;
 
-public class Wind {
+public class WindInfo {
 
 	private Double speed;
 	private Integer deg;
