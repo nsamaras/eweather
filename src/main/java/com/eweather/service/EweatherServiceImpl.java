@@ -33,7 +33,7 @@ public class EweatherServiceImpl extends BaseEntityManager implements EweatherSe
 		txn = em.getTransaction();
 		txn.begin();
 		User user = new User();
-		user.setId(2);
+		user.setId(4);
 		user.setName("test");
 		user.setEmail("email@email.gr");
 		em.persist(user);
