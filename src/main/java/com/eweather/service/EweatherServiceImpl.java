@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityTransaction;
 
+import com.eweather.app.Address;
 import com.eweather.app.User;
 import com.eweather.entity.City;
 
@@ -36,6 +37,11 @@ public class EweatherServiceImpl extends BaseEntityManager implements EweatherSe
 		user.setId(4);
 		user.setName("test");
 		user.setEmail("email@email.gr");
+		Address add = new Address();
+		add.setId(1L);
+		add.setName("name");
+		user.setAddress(add);
+		
 		em.persist(user);
 		txn.commit();
 	}
