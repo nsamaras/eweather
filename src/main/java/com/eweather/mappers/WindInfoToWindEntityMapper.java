@@ -13,6 +13,7 @@ public class WindInfoToWindEntityMapper {
 		Wind wind = new Wind();
 		wind.setDeg(windInfo.getDeg());
 		wind.setSpeed(windInfo.getSpeed());
+		wind.setGust(windInfo.getGust());
 		return wind;
 	}
 }

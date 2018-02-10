@@ -4,6 +4,7 @@ public class WindInfo {
 
 	private Double speed;
 	private Integer deg;
+	private Double gust;
 	
 	public Double getSpeed() {
 		return speed;
@@ -16,6 +17,12 @@ public class WindInfo {
 	}
 	public void setDeg(Integer deg) {
 		this.deg = deg;
+	}
+	public Double getGust() {
+		return gust;
+	}
+	public void setGust(Double gust) {
+		this.gust = gust;
 	}
 	
 }

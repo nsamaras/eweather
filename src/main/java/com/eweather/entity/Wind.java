@@ -22,6 +22,9 @@ public class Wind {
 	@Column(name = "DEG", nullable = false)
 	private Integer deg;
 	
+	@Column(name = "GUST", nullable = false)
+	private Double gust;
+	
 	@OneToOne(mappedBy="wind")
 	private City city;
 	
@@ -48,6 +51,12 @@ public class Wind {
 	}
 	public void setCity(City city) {
 		this.city = city;
+	}
+	public Double getGust() {
+		return gust;
+	}
+	public void setGust(Double gust) {
+		this.gust = gust;
 	}
 	
 }

@@ -64,6 +64,7 @@ public class PopulateModel {
 		Wind wind = new Wind();
 		wind.setDeg(290);
 		wind.setSpeed(2.1);
+		wind.setGust(1.1);
 		return wind;
 	}
 	
