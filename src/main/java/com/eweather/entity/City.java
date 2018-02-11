@@ -19,7 +19,7 @@ import javax.persistence.Table;
 public class City {
 
 	@Id  
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Column(name = "id", updatable = false, nullable = false)
 	private Integer id;
 	
 	@Column(name = "NAME", nullable = false)

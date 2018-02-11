@@ -15,6 +15,7 @@ public class PopulateModel {
 		city.setMain(getMain());
 		city.setWind(getWind());
 		city.setClouds(getClouds()); 
+		city.setId(735914);
 		return city;
 	}
 	
@@ -33,6 +34,7 @@ public class PopulateModel {
 		sys.setSunrise(1517981525);
 		sys.setSunset(1518019006);
 		sys.setType(1);
+		sys.setId(5704);
 		return sys;
 	}
 	
@@ -41,11 +43,13 @@ public class PopulateModel {
 		weather_1.setDescription("description_1");
 		weather_1.setIcon("icon_1");
 		weather_1.setMain("main_1");
+		weather_1.setId(500);
 		
 		Weather weather_2 = new Weather();
 		weather_2.setDescription("description_2");
 		weather_2.setIcon("icon_2");
 		weather_2.setMain("main_2");
+		weather_2.setId(501);
 		
 		return Arrays.asList(weather_1, weather_2);
 	}

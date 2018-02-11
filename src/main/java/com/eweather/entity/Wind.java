@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class Wind {
 
 	@Id  
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	private Integer id;
 	
 	@Column(name = "SPEED", nullable = false)

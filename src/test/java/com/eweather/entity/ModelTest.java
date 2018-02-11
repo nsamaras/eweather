@@ -47,13 +47,13 @@ public class ModelTest extends BaseEntityManager {
 		City result = em.find(City.class, city.getId());
 		
 		// test city
-		assertNotNull(result.getId());
+		assertEquals(Integer.valueOf(735914), result.getId());
 		
 		// test coord
 		assertNotNull(result.getCoord().getId());
 		
 		// test sys
-		assertNotNull(result.getSys().getId());
+		assertEquals(Integer.valueOf(5704), result.getSys().getId());
 		
 		// weather
 		assertEquals(2, result.getWeather().size());

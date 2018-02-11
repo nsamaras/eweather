@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class Clouds {
 
 	@Id  
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	private Integer id;
 	
 	@Column(name = "ALL", nullable = false)
