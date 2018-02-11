@@ -6,8 +6,15 @@
              version="2.1">
 		<persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
 	    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>    
-	    <class>com.eweather.app.User</class>
-	    <class>com.eweather.app.Address</class>
+	   	
+		   	<class>com.eweather.entity.City</class>
+	        <class>com.eweather.entity.Coord</class>
+	        <class>com.eweather.entity.Sys</class>
+	        <class>com.eweather.entity.Weather</class>
+	        <class>com.eweather.entity.Main</class>
+	        <class>com.eweather.entity.Wind</class>
+	        <class>com.eweather.entity.Clouds</class>
+	        
 	    <properties>
 		      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/eweather;create=true"/>
 		      
