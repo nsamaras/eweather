@@ -1,4 +1,9 @@
-package com.eweather.info;
+package com.eweather.weather.info;
+
+import com.eweather.common.info.CloudsInfo;
+import com.eweather.common.info.CoordInfo;
+import com.eweather.common.info.WeatherInfo;
+import com.eweather.common.info.WindInfo;
 
 public class ListInfo {
 

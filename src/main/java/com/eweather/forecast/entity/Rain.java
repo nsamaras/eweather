@@ -1,4 +1,4 @@
-package com.eweather.entity;
+package com.eweather.forecast.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,33 +9,33 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="CLOUDS")
-public class Clouds {
+@Table(name="RAIN")
+public class Rain {
 
 	@Id  
 	@GeneratedValue(strategy = GenerationType.TABLE)
-	private Integer id;
+	private Long id;
 	
-	@Column(name = "ALL_", nullable = false)
-	private Integer all;
+	@Column(name = "_3H", nullable = false)
+	private Double _3h;
 	
-	@OneToOne(mappedBy="clouds")
+	@OneToOne(mappedBy="rain")
 	private City city;
 
-	public Integer getAll() {
-		return all;
-	}
-
-	public void setAll(Integer all) {
-		this.all = all;
-	}
-
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public Double get_3h() {
+		return _3h;
+	}
+
+	public void set_3h(Double _3h) {
+		this._3h = _3h;
 	}
 
 	public City getCity() {
@@ -45,5 +45,6 @@ public class Clouds {
 	public void setCity(City city) {
 		this.city = city;
 	}
+
 	
 }

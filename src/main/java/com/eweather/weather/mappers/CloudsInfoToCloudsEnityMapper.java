@@ -1,7 +1,7 @@
-package com.eweather.mappers;
+package com.eweather.weather.mappers;
 
+import com.eweather.common.info.CloudsInfo;
 import com.eweather.entity.Clouds;
-import com.eweather.info.CloudsInfo;
 
 /**
  * That class has the responsibility to map the 

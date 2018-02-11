@@ -1,4 +1,4 @@
-package com.eweather.info;
+package com.eweather.common.info;
 
 public class CoordInfo {
 

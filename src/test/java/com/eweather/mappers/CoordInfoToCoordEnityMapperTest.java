@@ -4,8 +4,9 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.eweather.common.info.CoordInfo;
 import com.eweather.entity.Coord;
-import com.eweather.info.CoordInfo;
+import com.eweather.weather.mappers.CoordInfoToCoordEnityMapper;
 
 public class CoordInfoToCoordEnityMapperTest {
 

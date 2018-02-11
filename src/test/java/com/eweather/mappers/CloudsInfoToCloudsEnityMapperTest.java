@@ -4,8 +4,9 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.eweather.common.info.CloudsInfo;
 import com.eweather.entity.Clouds;
-import com.eweather.info.CloudsInfo;
+import com.eweather.weather.mappers.CloudsInfoToCloudsEnityMapper;
 
 public class CloudsInfoToCloudsEnityMapperTest {
 

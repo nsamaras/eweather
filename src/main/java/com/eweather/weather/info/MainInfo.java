@@ -1,4 +1,4 @@
-package com.eweather.info;
+package com.eweather.weather.info;
 
 public class MainInfo {
 

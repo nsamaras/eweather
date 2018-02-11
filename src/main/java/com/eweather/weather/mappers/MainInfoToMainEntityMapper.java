@@ -1,7 +1,7 @@
-package com.eweather.mappers;
+package com.eweather.weather.mappers;
 
 import com.eweather.entity.Main;
-import com.eweather.info.MainInfo;
+import com.eweather.weather.info.MainInfo;
 
 /**
  * That class has the responsibility to map the 

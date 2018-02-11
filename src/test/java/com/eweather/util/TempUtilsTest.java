@@ -9,8 +9,8 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-import com.eweather.info.EweatherInfo;
 import com.eweather.utils.TempUtils;
+import com.eweather.weather.info.EweatherInfo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class TempUtilsTest {

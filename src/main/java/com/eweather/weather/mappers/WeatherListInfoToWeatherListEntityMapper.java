@@ -1,10 +1,10 @@
-package com.eweather.mappers;
+package com.eweather.weather.mappers;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.eweather.common.info.WeatherInfo;
 import com.eweather.entity.Weather;
-import com.eweather.info.WeatherInfo;
 
 /**
  * That class has the responsibility to map the 

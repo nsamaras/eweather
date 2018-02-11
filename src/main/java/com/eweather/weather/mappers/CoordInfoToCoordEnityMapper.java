@@ -1,7 +1,7 @@
-package com.eweather.mappers;
+package com.eweather.weather.mappers;
 
+import com.eweather.common.info.CoordInfo;
 import com.eweather.entity.Coord;
-import com.eweather.info.CoordInfo;
 
 /**
  * That class has the responsibility to map the 
